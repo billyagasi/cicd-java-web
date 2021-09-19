@@ -12,7 +12,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t darinpope/java-web-app:latest .'
+        sh 'docker build -t --privileged darinpope/java-web-app:latest .'
       }
     }
     stage('Login') {
